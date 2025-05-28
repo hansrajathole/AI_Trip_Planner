@@ -7,7 +7,7 @@ const tripPlanRoutes = require("./routes/tripPlanRoutes.js");
 
 app.use(
   cors({
-    origin: "https://ai-trip-ridein-frontend.onrender.com", // Add all allowed frontend origins here
+    origin: "http://localhost:5173", // Add all allowed frontend origins here
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
