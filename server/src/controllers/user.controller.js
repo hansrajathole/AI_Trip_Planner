@@ -6,6 +6,7 @@ const bcrypt = require("bcrypt");
 module.exports.registerController = async (req, res) => {
   try {
     const { username, email, password } = req.body;
+    
     const hashPassword = await bcrypt.hash(password, 10);
 
     const user = await userModel.create({
