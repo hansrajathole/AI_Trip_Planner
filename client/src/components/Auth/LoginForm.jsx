@@ -22,7 +22,6 @@ export default function LoginForm() {
         const response = await axiosInstance.post("/user/login", userdata );
         setUser(response.data.user);
         localStorage.setItem("token", response.data.token);
-        console.log(response.data);
         navigate("/travel-preferences");
       } catch (error) {
         console.error("Login failed:", error.response?.data?.error || error.message);

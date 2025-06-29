@@ -102,7 +102,7 @@ const TripWeather = ({ tripId, tripPlan, setTripPlan }) => {
         }
         
         const data = await response.json();
-        console.log("Weather data:", data);
+        // console.log("Weather data:", data);
         setWeather(data);
         setWeatherError(null);
       } catch (error) {
