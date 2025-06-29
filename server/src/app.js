@@ -4,10 +4,10 @@ const cors = require("cors");
 
 const userRoutes = require("./routes/user.routes.js");
 const tripPlanRoutes = require("./routes/tripPlanRoutes.js");
-
+const origin = process.env.FRONTEND_URL || "http://localhost:5173"; // Default to localhost if not set
 app.use(
   cors({
-    origin: "http://localhost:5173", // Add all allowed frontend origins here
+    origin: origin, // Add all allowed frontend origins here
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
