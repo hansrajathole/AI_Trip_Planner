@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Send } from "lucide-react";
-
+import { axiosInstance } from "../components/Axios/axios";
 const intentButtons = [
   { label: "🔁 Reset Password", message: "How can I reset my password?" },
   { label: "✈ Book Flight", message: "Help me book a flight to Paris." },
@@ -106,7 +106,7 @@ function Chat() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/tripplan/chat", {
+      const res = await axiosInstance.post("/tripplan/chat", {
         message: messageToSend,
       });
 
