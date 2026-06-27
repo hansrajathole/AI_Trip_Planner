@@ -7,7 +7,7 @@ const tripPlanRoutes = require("./routes/tripPlanRoutes.js");
 const origin = process.env.FRONTEND_URL || "http://localhost:5173"; // Default to localhost if not set
 app.use(
   cors({
-    origin: origin, // Add all allowed frontend origins here
+    origin: [origin, "http://localhost:5173", "http://localhost:5174"], // Add all allowed frontend origins here
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

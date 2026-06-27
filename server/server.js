@@ -15,7 +15,7 @@ const jwt = require("jsonwebtoken"); // JWT for token verification
 
 const io = socketIo(server, {
   cors: {
-    origin: "https://ai-trip-ridein-frontend.onrender.com",
+    origin: ["https://ai-trip-ridein-frontend.onrender.com", "http://localhost:5173", "http://localhost:5174", process.env.FRONTEND_URL],
     methods: ["GET", "POST"],
     credentials: true,
   },
